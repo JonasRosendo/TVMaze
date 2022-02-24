@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TV Maze</string>
+    <string name="shows">Shows</string>
+    <string name="looking_for_some_show">Looking for some show?</string>
+    <string name="search">Search</string>
+    <string name="try_again">try again</string>
+    <string name="back_to_all_shows">Back to all shows</string>
+    <string name="error_try_again_later">An error occurred \ntry again later :(</string>
+    <string name="empty_show">No details found for \nthis show :(</string>
+    <string name="episodes_button_text">episodes</string>
+</resources>
