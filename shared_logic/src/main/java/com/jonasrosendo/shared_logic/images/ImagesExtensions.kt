@@ -1,6 +1,7 @@
 package com.jonasrosendo.shared_logic.images
 
 import android.widget.ImageView
+import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
@@ -12,8 +13,15 @@ import com.jonasrosendo.shared_logic.R
 
 fun ImageView.load(url: String) {
 
+    val progress = CircularProgressDrawable(context).apply {
+        strokeWidth = 2f
+        centerRadius = 10f
+        start()
+    }
+
     val options = RequestOptions()
         .diskCacheStrategy(DiskCacheStrategy.ALL)
+        .placeholder(progress)
         .error(R.drawable.tvm_header_logo)
 
     Glide.with(context)
